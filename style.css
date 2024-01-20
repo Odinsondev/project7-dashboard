@@ -70,10 +70,6 @@ aside {
   gap: 5%;
 }
 
-/* .nav1 > div {
-  border: 1px solid red;
-} */
-
 .nav1-top {
   display: flex;
   font-size: 1.5rem;
@@ -132,10 +128,6 @@ main {
   min-width: 0; 
 }
 
-main > div {
-  /* border: 1px solid red; */
-}
-
 .main-left {
   display: grid;
   grid-template-rows: 8% 1fr;
@@ -175,10 +167,6 @@ main > div {
   border-left: 5px solid var(--background2);
 }
 
-.content1 > div > div {
-  /* border: 1px solid red; */
-}
-
 .content1 > div > div:first-child {
   overflow: auto;
 }
@@ -213,30 +201,68 @@ main > div {
 .main-right {
   display: grid;
   grid-template-rows: 1fr 1fr;
-}
 
-.main-right > div {
-  border: 1px solid red;
-}
+  margin-right: 6%;
+  margin-bottom: 6%;
 
-.main-right > div > div {
-  border: 1px solid red;
+
+  min-height: 0;
+  min-width: 0; 
 }
 
 .main-right-top {
   display: grid;
   grid-template-rows: 16% 1fr;
+
+
+
+  min-height: 0;
+  min-width: 0; 
 }
 
 .content2 {
   display: grid;
-  grid-template-rows: repeat(3, 1fr);
 
   background-color: var(--background3);
+  border-radius: 10px;
+
+
+
+  min-height: 0;
+  min-width: 0; 
 }
 
 .content2 > div {
-  border: 1px solid red;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+
+  margin: 0.9rem;
+
+
+
+  min-height: 0;
+  min-width: 0; 
+}
+
+.content2 > div > div {
+  overflow: auto;
+}
+
+.content2 > div > div:nth-child(2) {
+  border-top: 1px solid var(--background4);
+  border-bottom: 1px solid var(--background4);
+}
+
+.announcement-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0.4rem 0 0.4rem 0;
+}
+
+.announcement-text {
+  font-size: 0.8rem;
+  color: var(--text2);
+  margin: 0;
 }
 
 .main-right-bottom {
@@ -249,6 +275,7 @@ main > div {
   grid-template-rows: repeat(4, 1fr);
 
   background-color: var(--background3);
+  border-radius: 10px;
 }
 
 .content3 > div {
