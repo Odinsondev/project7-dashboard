@@ -42,19 +42,116 @@ body {
 }
 
 header {
-  border: 1px solid red;
-
   display: grid;
   grid-template: 1fr 2fr / 2fr 1fr;
 
-  background-color: var(--background3);
+  background-color: rgb(240, 200, 247);
 }
 
-header > div {
-  border: 1px solid red;
-} 
+.header-top-left {
+  display: flex;
+  align-items: center;
+}
 
+.search-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0 1rem 0 1rem;
+}
 
+input {
+  appearance: none;
+  background-color: rgb(251, 251, 189);
+  border-radius: 8px;
+  border: 1px solid rgb(199, 1, 234);
+  height: 1.5rem;
+  width: 80%;
+}
+
+.header-top-right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.header-top-right > * {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.bell-icon {
+  height: 2.2rem;
+  width: 2.2rem;
+  margin-top: 0.5rem;
+}
+
+.batman2 {
+  height: 3rem;
+  width: 3rem;
+  margin-bottom: -0.8rem;
+}
+
+.top-right-name {
+  font-weight: 500;
+  margin-right: 5%;
+}
+
+.header-bottom-left {
+  display: flex;
+  align-items: center;
+}
+
+.batman {
+  height: 5rem;
+  width: 5rem;
+  margin: 0.5rem 1rem -1rem 1rem;
+}
+
+.profile-text {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.profile-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.header-bottom-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header-bottom-right > button {
+  height: clamp(30px, 40%, 50px);
+  width: 25%;
+  border-radius: 20px;
+  border-style: none;
+  border: 1px solid rgb(117, 117, 15);
+  background-color: var(--background2);
+}
+
+.header-bottom-right > button:hover {
+  height: 40%;
+  width: 25%;
+  border-radius: 20px;
+  border-style: none;
+  border: 1px solid rgb(143, 143, 56);
+  background-color: rgb(255, 255, 134);
+  color: rgb(48, 48, 48);
+}
+
+.header-bottom-right > button:active {
+  height: 40%;
+  width: 25%;
+  border-radius: 20px;
+  border-style: none;
+  border: 1px solid rgb(44, 44, 0);
+  background-color: rgb(255, 255, 45);
+  color: black;
+}
 
 aside {
   /* border: 1px solid red; */
@@ -77,7 +174,7 @@ aside {
   margin: 10px 0 0 10%;
 }
 
-.batman {
+.bat {
   height: 4rem;
   width: 4rem;
 }
@@ -97,6 +194,33 @@ aside {
   display: flex;
 }
 
+/* Added button functionality to nav icons */
+
+.nav1-middle > div > button {
+  display: flex;
+  width: 90%;
+  padding: 0;
+  border-radius: 10px;
+  border-style: none;
+  background-color: var(--background2);
+}
+
+.nav1-middle > div > button:hover {
+  display: flex;
+  width: 90%;
+  padding: 0;
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(255, 255, 134);
+}
+
+.nav1-middle > div > button > p {
+  margin: 0.75rem;
+}
+
+/* Button end */
+
+
 .nav1-middle > div > p {
   margin: 0.75rem;
 }
@@ -109,6 +233,33 @@ aside {
 .nav1-bottom > div {
   display: flex;
 }
+
+/* Added button functionality to nav icons */
+
+.nav1-bottom > div > button {
+  display: flex;
+  width: 90%;
+  padding: 0;
+  border-radius: 10px;
+  border-style: none;
+  background-color: var(--background2);
+}
+
+.nav1-bottom > div > button:hover {
+  display: flex;
+  width: 90%;
+  padding: 0;
+  border-radius: 10px;
+  border-style: none;
+  background-color: rgb(255, 255, 134);
+}
+
+.nav1-bottom > div > button > p {
+  margin: 0.75rem;
+}
+
+/* Button end */
+
 
 .nav1-bottom > div > p {
   margin: 0.75rem;
@@ -268,20 +419,61 @@ main {
 .main-right-bottom {
   display: grid;
   grid-template-rows: 16% 1fr;
+
+
+  min-height: 0;
+  min-width: 0; 
 }
 
 .content3 {
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
 
   background-color: var(--background3);
   border-radius: 10px;
+
+
+
+  min-height: 0;
+  min-width: 0; 
 }
 
 .content3 > div {
-  border: 1px solid red;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+
+  margin: 0.9rem;
+
+
+
+  min-height: 0;
+  min-width: 0; 
 }
 
+.content3 > div > div {
+/*   border: 1px solid red; */
+
+  display: flex;
+
+  overflow: auto;
+}
+
+.icon3 {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.1rem 0.4rem 0 0;
+}
+
+.name1 {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0.3rem 0 0 0;
+}
+
+.name2 {
+  font-size: 0.6rem;
+  color: var(--text2);
+  margin: 0.3rem 0 0 0;
+}
 
 footer {
   /* border: 1px solid red; */
